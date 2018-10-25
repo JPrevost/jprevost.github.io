@@ -1,9 +1,9 @@
 ---
-title: "Discover Index Project: what is it and how's it going?"
+title: "Discovery Index Project: what is it and how's it going?"
 layout: slide
 ---
 <section data-markdown>
-  ### Discover Index Project
+  ### Discovery Index Project
   ##### what is it and how's it going?
   Jeremy Prevost
 </section>
@@ -41,7 +41,7 @@ layout: slide
 </section>
 
 <section data-markdown>
-## Singld Data Source: Aleph
+## Single Data Source: Aleph
 - We can easily get the data so we can focus on the pipeline and API
 - Known experts in our metadata team
 
