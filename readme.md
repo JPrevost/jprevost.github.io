@@ -9,3 +9,4 @@ permalink: /
 - [Reveal.js + Jekyll + GitHub Pages = :rainbow::unicorn:](/talks/reveal_jekyll_pages_win)
 - [Pull Request and Commit Templates](/talks/pr_template)
 - [DevOps Interest Group](/talks/devops_ig)
+- [Discovery Index Project](/talks/dip)
