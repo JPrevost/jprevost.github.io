@@ -10,3 +10,4 @@ permalink: /
 - [Pull Request and Commit Templates](/talks/pr_template)
 - [DevOps Interest Group](/talks/devops_ig)
 - [Discovery Index Project](/talks/dip)
+- [API Documentation](/talks/api_docs)
