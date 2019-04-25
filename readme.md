@@ -11,3 +11,4 @@ permalink: /
 - [DevOps Interest Group](/talks/devops_ig)
 - [Discovery Index Project](/talks/dip)
 - [API Documentation](/talks/api_docs)
+- [TIMDEX! so... you wanted, er, something else?](/talks/timdex_relevance)
