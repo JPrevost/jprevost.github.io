@@ -1,0 +1,35 @@
+// dot timdex_central.dot -Tpng > timdex_central.png
+// requires installation of GraphViz (brew install graphviz, or
+// http://www.graphviz.org/Download..php if that doesn't work)
+
+digraph G {
+  label="Discovery UI Current State";
+  labelloc=t;
+  fontname=helvetica;
+  fontsize=18;
+  node [style=filled, fontname=helvetica, fillcolor=white, penwidth=4, fontsize=16];
+  pad=0.3;
+
+  "Aleph Data" -> "EDS"
+  "ArchiveSpace Data"
+  "DSpace Data" -> "DSpace UI"
+  "Dome Data" -> "Dome UI"
+
+  "Aleph Data" -> TIMDEX
+  "ArchiveSpace Data" -> TIMDEX
+  "ArchiveSpace Data" -> "ArchivesSpace UI"
+  
+  "MegaIndex" -> Bento
+  "MegaIndex"
+
+  "EDS" -> Bento
+  EDS -> EDS_UI
+  EDS_UI -> "Source UI"
+  "Aleph Data" -> "Aleph UI"
+  "Aleph UI" -> "OPAC Features"
+  // "OPAC Features" -> "View checked out items"[color=SteelBlue1]
+  // "OPAC Features" -> "Renew items"[color=SteelBlue1]
+  // "OPAC Features" -> "Pay fines"[color=SteelBlue1]
+
+  "Bento" -> "Source UI"
+}

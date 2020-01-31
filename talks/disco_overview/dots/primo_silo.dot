@@ -1,0 +1,36 @@
+// dot timdex_central.dot -Tpng > timdex_central.png
+// requires installation of GraphViz (brew install graphviz, or
+// http://www.graphviz.org/Download..php if that doesn't work)
+
+digraph G {
+  label="Discovery: siloed MARC and DDC";
+  labelloc=t;
+  fontname=helvetica;
+  fontsize=18;
+  node [style=filled, fontname=helvetica, fillcolor=white, penwidth=4, fontsize=16];
+  pad=0.3;
+
+  "Alma Data" -> Primo
+  
+  "ArchiveSpace Data" -> "ArchivesSpace UI"
+  "DSpace Data" -> "DSpace UI"
+  "Dome Data" -> "Dome UI"
+
+  "ArchiveSpace Data" -> TIMDEX
+  "DSpace Data" -> TIMDEX
+  "Dome Data" -> TIMDEX
+  TIMDEX -> "DDC Discovery UI?"
+  // TIMDEX -> Bento
+
+  "MegaIndex" -> Primo
+
+  // "Primo" -> Bento
+  Primo -> "Source UI"
+
+  Primo -> "OPAC Features"
+  // "OPAC Features" -> "View checked out items"[color=SteelBlue1]
+  // "OPAC Features" -> "Renew items"[color=SteelBlue1]
+  // "OPAC Features" -> "Pay fines"[color=SteelBlue1]
+
+  // "Bento" -> "Source UI"
+}
