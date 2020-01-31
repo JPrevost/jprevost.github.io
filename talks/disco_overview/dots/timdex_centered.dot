@@ -1,0 +1,60 @@
+// dot timdex_central.dot -Tpng > timdex_central.png
+// requires installation of GraphViz (brew install graphviz, or
+// http://www.graphviz.org/Download..php if that doesn't work)
+
+digraph G {
+  label="Discovery and ILS UI";
+  labelloc=t;
+  fontname=helvetica;
+  fontsize=18;
+  node [style=filled, fontname=helvetica, fillcolor=white, penwidth=4, fontsize=16];
+  pad=0.3;
+
+  Aleph[color=Yellow1]
+  ArchiveSpace
+  DSpace
+  "Alma"[color=SteelBlue1]
+  "ILS Features"[color=SteelBlue1]
+  DiscoUI[label="MIT Libraries Discovery UI", color=SteelBlue1]
+  "View checked out items"[color=SteelBlue1]
+  "Renew items"[color=SteelBlue1]
+  "Pay fines"[color=SteelBlue1]
+
+  "Aleph" -> "TIMDEX"
+  "ArchiveSpace" -> "TIMDEX"
+  "DSpace" -> "TIMDEX"[color=SteelBlue1]
+  "Dome" -> "TIMDEX"[color=SteelBlue1]
+  "Alma" -> "TIMDEX"[color=SteelBlue1]
+
+  "MegaIndex" -> DiscoUI[color=SteelBlue1]
+  "MegaIndex"[color=SteelBlue1]
+
+  "TIMDEX" -> DiscoUI[color=SteelBlue1]
+  DiscoUI -> "ILS Features"[color=SteelBlue1]
+  "ILS Features" -> "View checked out items"[color=SteelBlue1]
+  "ILS Features" -> "Renew items"[color=SteelBlue1]
+  "ILS Features" -> "Pay fines"[color=SteelBlue1]
+
+  DiscoUI -> "Search UI"
+  "Search UI" -> "Record UI"
+  "Record UI" -> "Get Object"
+  "Record UI" -> "Source UI (for all but Alma)"
+  "Record UI" -> "IIIF Viewer"[color=SteelBlue1]
+  "IIIF Viewer"[color=SteelBlue1]
+
+  "Record UI" -> "ILS Features"[color=SteelBlue1]
+  "ILS Features" -> "Request Hold"[color=SteelBlue1]
+  "Request Hold"[color=SteelBlue1]
+  "Search UI"[color=SteelBlue1]
+  "Record UI"[color=SteelBlue1]
+
+  subgraph clusterLegend {
+    label="Key";
+    {
+     k4[label="Future Project", color=SteelBlue1];
+     k2[label="Retiring System", color=Yellow1, fillcolor=Yellow1];
+     k1[label="Existing System"]
+     k1 -> k2 -> k4 [style=invis]
+     }
+  }
+}
