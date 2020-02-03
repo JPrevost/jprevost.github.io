@@ -24,18 +24,21 @@ digraph G {
   "ArchiveSpace Data" -> TIMDEX
   "DSpace Data" -> TIMDEX
   "Dome Data" -> TIMDEX
-  // TIMDEX -> "DDC Discovery UI?"
-  // TIMDEX -> Bento
 
   "MegaIndex" -> Primo
 
-  // "Primo" -> Bento
   Primo -> "Source UI"
-
   Primo -> "OPAC Features"
-  // "OPAC Features" -> "View checked out items"[color=SteelBlue1]
-  // "OPAC Features" -> "Renew items"[color=SteelBlue1]
-  // "OPAC Features" -> "Pay fines"[color=SteelBlue1]
 
-  // "Bento" -> "Source UI"
+
+
+  subgraph clusterLegend {
+    label="Key";
+    {
+     k4[label="Vended System", color=Yellow1];
+     k2[label="Hosted System", color=darkorange3];
+     k1[label="Custom Solution", color=DeepSkyBlue4]
+     k1 -> k2 -> k4 [style=invis]
+     }
+  }
 }

@@ -12,11 +12,11 @@ digraph G {
 
   "Alma Data" -> Primo
   
-  "ArchiveSpace Data" -> "ArchivesSpace UI"
+  "ArchivesSpace Data" -> "ArchivesSpace UI"
   "DSpace Data" -> "DSpace UI"
   "Dome Data" -> "Dome UI"
 
-  "ArchiveSpace Data" -> TIMDEX
+  "ArchivesSpace Data" -> TIMDEX
   "DSpace Data" -> TIMDEX
   "Dome Data" -> TIMDEX
   TIMDEX -> "DDC Discovery UI?"
@@ -33,4 +33,31 @@ digraph G {
   // "OPAC Features" -> "Pay fines"[color=SteelBlue1]
 
   "Bento" -> "Source UI"
+
+
+  MegaIndex[color=Yellow1]
+  "DSpace Data"[color=Yellow1]
+  "DSpace UI"[color=Yellow1]
+  "Alma Data"[color=Yellow1]
+  Primo[color=Yellow1]
+  "OPAC Features"[color=Yellow1]
+  "ArchivesSpace Data"[color=Yellow1]
+  "ArchivesSpace UI"[color=Yellow1]
+
+  "Bento"[color=DeepSkyBlue4]
+  "TIMDEX"[color=DeepSkyBlue4]
+  "DDC Discovery UI?"[color=DeepSkyBlue4]
+
+  "Dome Data"[color=darkorange3]
+  "Dome UI"[color=darkorange3]
+
+  subgraph clusterLegend {
+    label="Key";
+    {
+     k4[label="Vended System", color=Yellow1];
+     k2[label="Hosted System", color=darkorange3];
+     k1[label="Custom Solution", color=DeepSkyBlue4]
+     k1 -> k2 -> k4 [style=invis]
+     }
+  }
 }

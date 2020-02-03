@@ -11,15 +11,15 @@ digraph G {
   pad=0.3;
 
   "Aleph Data" -> "EDS"
-  "ArchiveSpace Data"
+  "ArchivesSpace Data"
   "DSpace Data" -> "DSpace UI"
   "Dome Data" -> "Dome UI"
 
   "Aleph Data" -> TIMDEX
-  "ArchiveSpace Data" -> TIMDEX
-  "ArchiveSpace Data" -> "ArchivesSpace UI"
+  "ArchivesSpace Data" -> TIMDEX
+  "ArchivesSpace Data" -> "ArchivesSpace UI"
   
-  "MegaIndex" -> Bento
+  "MegaIndex" -> EDS
   "MegaIndex"
 
   "EDS" -> Bento
@@ -32,4 +32,31 @@ digraph G {
   // "OPAC Features" -> "Pay fines"[color=SteelBlue1]
 
   "Bento" -> "Source UI"
+
+  "Bento"[color=DeepSkyBlue4]
+  "TIMDEX"[color=DeepSkyBlue4]
+
+  EDS[color=Yellow1]
+  EDS_UI[color=Yellow1]
+  MegaIndex[color=Yellow1]
+  "DSpace Data"[color=Yellow1]
+  "DSpace UI"[color=Yellow1]
+  "ArchivesSpace Data"[color=Yellow1]
+  "ArchivesSpace UI"[color=Yellow1]
+
+  "Aleph Data"[color=darkorange3]
+  "Aleph UI"[color=darkorange3]
+  "OPAC Features"[color=darkorange3]
+  "Dome Data"[color=darkorange3]
+  "Dome UI"[color=darkorange3]
+
+  subgraph clusterLegend {
+    label="Key";
+    {
+     k4[label="Vended System", color=Yellow1];
+     k2[label="Hosted System", color=darkorange3];
+     k1[label="Custom Solution", color=DeepSkyBlue4]
+     k1 -> k2 -> k4 [style=invis]
+     }
+  }
 }
