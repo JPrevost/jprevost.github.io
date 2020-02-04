@@ -12,8 +12,8 @@ digraph G {
 
   "Alma Data" -> Primo
   
-  "ArchiveSpace Data" -> "ArchivesSpace UI"
-  "ArchiveSpace Data" -> Primo
+  "ArchivesSpace Data" -> "ArchivesSpace UI"
+  "ArchivesSpace Data" -> Primo
 
   "DSpace Data" -> "DSpace UI"
   "DSpace Data" -> Primo
@@ -21,7 +21,7 @@ digraph G {
   "Dome Data" -> "Dome UI"
   "Dome Data" -> Primo
 
-  "ArchiveSpace Data" -> TIMDEX
+  "ArchivesSpace Data" -> TIMDEX
   "DSpace Data" -> TIMDEX
   "Dome Data" -> TIMDEX
 
@@ -30,8 +30,22 @@ digraph G {
   Primo -> "Source UI"
   Primo -> "OPAC Features"
 
+  Primo[color=Yellow1]
+  "ArchivesSpace Data"[color=Yellow1]
+  "ArchivesSpace UI"[color=Yellow1]
+  "DSpace UI"[color=Yellow1]
+  "DSpace Data"[color=Yellow1]
+  MegaIndex[color=Yellow1]
+  "Alma Data"[color=Yellow1]
+  "OPAC Features"[color=Yellow1]
 
+  "Dome Data"[color=darkorange3]
+  "Dome UI"[color=darkorange3]
 
+  "Alma Data" -> TIMDEX
+  TIMDEX[color=DeepSkyBlue4]
+  TIMDEX -> "?"
+  
   subgraph clusterLegend {
     label="Key";
     {
