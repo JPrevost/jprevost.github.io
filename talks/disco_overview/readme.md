@@ -26,7 +26,7 @@ The main drawbacks around this solution come from a more Future of Libraries per
 
 This solution would likely provide a Bento in front of Primo and TIMDEX to provide a starting point for discovery and hand users off to Primo and other local systems for further refining of searches or accessing content.
 
-![alt text](pngs/primo_.png "Hybrid Discovery at MIT Libraries")
+![alt text](pngs/primo_hybrid.png "Hybrid Discovery at MIT Libraries")
 
 **This solution has the least risk to achieve the July 2021 target date without signficant resources becoming available to build a solution.**
 

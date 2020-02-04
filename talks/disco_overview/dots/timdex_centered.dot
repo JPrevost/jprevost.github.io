@@ -11,49 +11,53 @@ digraph G {
   pad=0.3;
 
   Aleph[color=Yellow1]
-  ArchiveSpace
-  DSpace
-  "Alma"[color=SteelBlue1]
-  "ILS Features"[color=SteelBlue1]
-  DiscoUI[label="MIT Libraries Discovery UI", color=SteelBlue1]
-  "View checked out items"[color=SteelBlue1]
-  "Renew items"[color=SteelBlue1]
-  "Pay fines"[color=SteelBlue1]
+  ArchiveSpace[color=Yellow1]
+  DSpace[color=Yellow1]
+  "Alma"[color=Yellow1]
+  Dome[color=darkorange3]
+  DiscoUI[label="MIT Libraries Discovery UI", color=DeepSkyBlue4]
+
 
   "Aleph" -> "TIMDEX"
   "ArchiveSpace" -> "TIMDEX"
-  "DSpace" -> "TIMDEX"[color=SteelBlue1]
-  "Dome" -> "TIMDEX"[color=SteelBlue1]
-  "Alma" -> "TIMDEX"[color=SteelBlue1]
+  "DSpace" -> "TIMDEX"
+  "Dome" -> "TIMDEX"
+  "Alma" -> "TIMDEX"
 
   "MegaIndex" -> DiscoUI[color=SteelBlue1]
-  "MegaIndex"[color=SteelBlue1]
+  "MegaIndex"[color=Yellow1]
 
   "TIMDEX" -> DiscoUI[color=SteelBlue1]
-  DiscoUI -> "ILS Features"[color=SteelBlue1]
-  "ILS Features" -> "View checked out items"[color=SteelBlue1]
-  "ILS Features" -> "Renew items"[color=SteelBlue1]
-  "ILS Features" -> "Pay fines"[color=SteelBlue1]
+  DiscoUI -> "OPAC Features"[color=SteelBlue1]
+  // "OPAC Features" -> "View checked out items"[color=SteelBlue1]
+  // "OPAC Features" -> "Renew items"[color=SteelBlue1]
+  // "OPAC Features" -> "Pay fines"[color=SteelBlue1]
+  // "OPAC Features" -> "Request Hold"[color=SteelBlue1]
+  // "Request Hold"[color=SteelBlue1]
+  // "View checked out items"[color=SteelBlue1]
+  // "Renew items"[color=SteelBlue1]
+  // "Pay fines"[color=SteelBlue1]
 
   DiscoUI -> "Search UI"
   "Search UI" -> "Record UI"
-  "Record UI" -> "Get Object"
+  // "Record UI" -> "Get Object"
   "Record UI" -> "Source UI (for all but Alma)"
-  "Record UI" -> "IIIF Viewer"[color=SteelBlue1]
-  "IIIF Viewer"[color=SteelBlue1]
+  "Record UI" -> "IIIF Viewer"
+  "IIIF Viewer"[color=DeepSkyBlue4]
 
-  "Record UI" -> "ILS Features"[color=SteelBlue1]
-  "ILS Features" -> "Request Hold"[color=SteelBlue1]
-  "Request Hold"[color=SteelBlue1]
-  "Search UI"[color=SteelBlue1]
-  "Record UI"[color=SteelBlue1]
+  "Record UI" -> "OPAC Features"[color=SteelBlue1]
+  "Search UI"[color=DeepSkyBlue4]
+  "Record UI"[color=DeepSkyBlue4]
+  "OPAC Features"[color=DeepSkyBlue4]
+
+  TIMDEX[color=DeepSkyBlue4]
 
   subgraph clusterLegend {
     label="Key";
     {
-     k4[label="Future Project", color=SteelBlue1];
-     k2[label="Retiring System", color=Yellow1, fillcolor=Yellow1];
-     k1[label="Existing System"]
+     k4[label="Vended System", color=Yellow1];
+     k2[label="Hosted System", color=darkorange3];
+     k1[label="Custom Solution", color=DeepSkyBlue4]
      k1 -> k2 -> k4 [style=invis]
      }
   }
