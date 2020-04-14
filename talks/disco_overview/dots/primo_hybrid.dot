@@ -3,7 +3,7 @@
 // http://www.graphviz.org/Download..php if that doesn't work)
 
 digraph G {
-  label="Discovery: largely siloed, but Bento";
+  label="Discovery: Hybrid model with Primo and Local solutions joined via a Bento";
   labelloc=t;
   fontname=helvetica;
   fontsize=18;
@@ -25,7 +25,9 @@ digraph G {
   "MegaIndex" -> Primo
 
   "Primo" -> Bento
-  Primo -> "Source UI"
+  Primo -> "Get or Request Objects"
+
+  "Source UI"[label="View full records in source system UI"]
 
   Primo -> "OPAC Features"
   // "OPAC Features" -> "View checked out items"[color=SteelBlue1]
@@ -33,6 +35,7 @@ digraph G {
   // "OPAC Features" -> "Pay fines"[color=SteelBlue1]
 
   "Bento" -> "Source UI"
+  "Bento" -> "Get or Request Objects"
 
 
   MegaIndex[color=Yellow1]
@@ -54,10 +57,11 @@ digraph G {
   subgraph clusterLegend {
     label="Key";
     {
+     k5[label="Various systems", color=Black];
      k4[label="Vended System", color=Yellow1];
      k2[label="Hosted System", color=darkorange3];
      k1[label="Custom Solution", color=DeepSkyBlue4]
-     k1 -> k2 -> k4 [style=invis]
+     k1 -> k2 -> k4 -> k5 [style=invis]
      }
   }
 }
